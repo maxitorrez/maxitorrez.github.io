@@ -13,6 +13,9 @@ export function build(out = join(ROOT, 'docs')) {
   rmSync(out, { recursive: true, force: true });
   mkdirSync(join(out, 'en'), { recursive: true });
   cpSync(join(ROOT, 'public'), out, { recursive: true });
+  // Librería de animación: build UMD (global window.Motion), funciona sin empaquetador.
+  mkdirSync(join(out, 'vendor'), { recursive: true });
+  cpSync(join(ROOT, 'node_modules', 'motion', 'dist', 'motion.js'), join(out, 'vendor', 'motion.js'));
   writeFileSync(join(out, 'index.html'), renderPage(contenido, 'es'));
   writeFileSync(join(out, 'en', 'index.html'), renderPage(contenido, 'en'));
   writeFileSync(join(out, '.nojekyll'), '');
