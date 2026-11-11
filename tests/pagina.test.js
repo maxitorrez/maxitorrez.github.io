@@ -36,6 +36,12 @@ for (const lang of ['es', 'en']) {
     assert.match(html, /<main id="contenido"/);
   });
 
+  test(`PF-11 [${lang}] temática Ares: la mascota encabeza el inicio y se usa Cinzel`, () => {
+    const hero = html.slice(html.indexOf('id="inicio"'), html.indexOf('id="sobre-mi"'));
+    assert.match(hero, /<img[^>]*class="mascot"[^>]*src="(\.\.\/)?assets\/ares\.svg"[^>]*alt="[^"]+"/);
+    assert.match(html, /family=Cinzel/);
+  });
+
   test(`PF-05d [${lang}] no se filtran valores vacíos`, () => {
     assert.doesNotMatch(html, /undefined|null|\[object Object\]/);
   });

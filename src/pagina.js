@@ -29,8 +29,9 @@ export function renderPage(c, lang) {
     <ul class="positioning">${p.positioning[lang].map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
     <div class="cta"><a class="btn primary" href="#proyectos">${esc(t('cta.projects', lang))}</a><a class="btn" href="#contacto">${esc(t('cta.contact', lang))}</a></div>
   </div>
+  <div class="hero-art"><img class="mascot" src="${base}assets/ares.svg" alt="${lang === 'es' ? 'Ares, mascota y emblema del portfolio' : 'Ares, mascot and emblem of this portfolio'}" width="220" height="262"></div>
   <ol class="hero-flow" aria-label="${lang === 'es' ? 'Cómo trabajo' : 'How I work'}">
-    ${(lang === 'es' ? ['Necesidad', 'Análisis', 'Diseño', 'Validación', 'Producto'] : ['Need', 'Analysis', 'Design', 'Validation', 'Product']).map((s, i) => `<li style="--i:${i}"><span class="n">0${i + 1}</span>${esc(s)}</li>`).join('')}
+    ${(lang === 'es' ? ['Necesidad', 'Análisis', 'Diseño', 'Validación', 'Producto'] : ['Need', 'Analysis', 'Design', 'Validation', 'Product']).map((s, i) => `<li style="--i:${i}"><span class="n">${['I', 'II', 'III', 'IV', 'V'][i]}</span>${esc(s)}</li>`).join('')}
   </ol>
 </section>`;
 
@@ -76,11 +77,11 @@ export function renderPage(c, lang) {
 <meta property="og:description" content="${esc(p.seoDescription[lang])}">
 <meta property="og:url" content="${url(lang)}">
 <meta property="og:locale" content="${lang === 'es' ? 'es_AR' : 'en_US'}">
-<meta name="theme-color" content="#0b0f14">
-<link rel="icon" href="${base}assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0f0c0a">
+<link rel="icon" href="${base}assets/ares.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${base}styles.css">
 <script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>
 </head>
