@@ -86,3 +86,9 @@ test('PF-06 educationItem no muestra período si no hay dato', () => {
   assert.match(out, /ORT/);
   assert.doesNotMatch(out, /class="period/);
 });
+
+test('PF-06b educationItem acepta un período bilingüe', () => {
+  const e = { title: { es: 'A', en: 'A' }, institution: 'UP', period: { es: 'Carrera de 3 años', en: '3-year degree' } };
+  assert.match(educationItem(e, 'en'), /<p class="period">3-year degree<\/p>/);
+  assert.doesNotMatch(educationItem(e, 'es'), /object/);
+});

@@ -33,8 +33,8 @@ export const perfil = {
   // Completar cuando estén disponibles; un campo vacío no se muestra.
   contact: {
     github: 'https://github.com/maxitorrez',
-    linkedin: '',
-    email: '',
+    linkedin: 'https://www.linkedin.com/in/patricio-torrez',
+    email: 'maxi.torrez@hotmail.com.ar',
   },
   contactText: {
     es: '¿Busca un analista funcional, necesita integrar sistemas o quiere convertir una idea en un producto? Hablemos.',

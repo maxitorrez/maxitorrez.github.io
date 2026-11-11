@@ -59,7 +59,8 @@ export function contactLinks(c, lang) {
 }
 
 export function educationItem(e, lang) {
-  return `<li class="card edu"><h3>${esc(e.title[lang])}</h3>${e.institution ? `<p class="inst">${esc(e.institution)}</p>` : ''}${e.period ? `<p class="period">${esc(e.period)}</p>` : ''}</li>`;
+  const period = e.period && typeof e.period === 'object' ? e.period[lang] : e.period;
+  return `<li class="card edu"><h3>${esc(e.title[lang])}</h3>${e.institution ? `<p class="inst">${esc(e.institution)}</p>` : ''}${period ? `<p class="period">${esc(period)}</p>` : ''}</li>`;
 }
 
 export const section = (id, title, body, extra = '') =>

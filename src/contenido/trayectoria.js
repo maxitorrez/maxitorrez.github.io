@@ -4,7 +4,7 @@ export const experiencia = [
   {
     role: { es: 'Business Solution Specialist / Analista Funcional', en: 'Business Solution Specialist / Functional Analyst' },
     period: { es: 'Febrero 2025 – Actualidad', en: 'February 2025 – Present' },
-    company: '', // confidencial / a completar
+    company: 'Movistar SA',
     responsibilities: {
       es: [
         'Relevamiento y análisis de requerimientos funcionales y técnicos.',
@@ -43,6 +43,7 @@ export const experiencia = [
 ];
 
 export const formacion = [
+  { title: { es: 'Analista Universitario en Sistemas', en: 'University Systems Analyst' }, institution: 'Universidad de Palermo', period: { es: 'Carrera de 3 años', en: '3-year degree' } },
   { title: { es: 'Formación en Sistemas', en: 'Systems training' }, institution: 'ORT', period: '' },
   { title: { es: 'Liderazgo: Gerencia en Tecnología / Ingeniería', en: 'Leadership: Technology / Engineering Management' }, institution: '', period: '' },
 ];
