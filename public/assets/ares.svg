@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 262" role="img" aria-label="Ares">
+      <defs>
+        <linearGradient id="bronze" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f6d58a"/>
+          <stop offset=".45" stop-color="#c8913a"/>
+          <stop offset="1" stop-color="#6e4515"/>
+        </linearGradient>
+        <linearGradient id="bronzeDark" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#b9822f"/>
+          <stop offset="1" stop-color="#5a3810"/>
+        </linearGradient>
+        <linearGradient id="crimson" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#e2342a"/>
+          <stop offset="1" stop-color="#6d0b0b"/>
+        </linearGradient>
+        <linearGradient id="cape" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#9e1414"/>
+          <stop offset="1" stop-color="#4a0606"/>
+        </linearGradient>
+        <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#e3a77a"/>
+          <stop offset="1" stop-color="#b8754a"/>
+        </linearGradient>
+        <radialGradient id="auraGrad">
+          <stop offset="0" stop-color="#ff7a1a" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#ff7a1a" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="eyeGlow">
+          <stop offset="0" stop-color="#fff6cf"/>
+          <stop offset=".45" stop-color="#ffb22e"/>
+          <stop offset="1" stop-color="#ffb22e" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="shieldGrad" cx=".35" cy=".3" r=".8">
+          <stop offset="0" stop-color="#fbe2a0"/>
+          <stop offset=".5" stop-color="#c8913a"/>
+          <stop offset="1" stop-color="#5e3a10"/>
+        </radialGradient>
+      </defs>
+
+      <circle id="aura" cx="110" cy="140" r="104" fill="url(#auraGrad)"/>
+      <ellipse class="shadow" cx="110" cy="252" rx="56" ry="7" fill="#000" opacity=".35"/>
+
+      <g id="figure" class="hit">
+        <!-- Lanza (detrás) -->
+        <g id="spear-arm">
+          <g id="spear">
+            <rect x="166" y="34" width="5" height="214" rx="2" fill="#5b3a1e"/>
+            <rect x="165" y="120" width="7" height="10" rx="1" fill="url(#bronzeDark)"/>
+            <path d="M168.5 6 L178 36 L168.5 44 L159 36 Z" fill="url(#bronze)" stroke="#4a2c0b" stroke-width="1"/>
+            <path d="M168.5 12 L168.5 40" stroke="#fff3c4" stroke-width="1" opacity=".7"/>
+            <circle id="spear-glow" cx="168.5" cy="24" r="16" fill="url(#eyeGlow)" opacity="0"/>
+          </g>
+          <!-- Brazo derecho que sostiene la lanza -->
+          <path d="M138 100 C150 108 158 124 164 142" stroke="url(#skin)" stroke-width="14" stroke-linecap="round" fill="none"/>
+          <rect x="152" y="126" width="16" height="12" rx="3" fill="url(#bronzeDark)" transform="rotate(28 160 132)"/>
+          <circle cx="168" cy="148" r="8" fill="url(#skin)" stroke="#8a5233" stroke-width="1"/>
+        </g>
+
+        <!-- Capa -->
+        <path id="cape-shape" d="M80 94 C70 140 62 190 56 236 C72 230 84 240 98 234 C112 242 124 232 138 238 C150 232 158 238 166 236 C158 190 150 140 140 94 Z" fill="url(#cape)"/>
+
+        <g id="body">
+          <!-- Piernas y grebas -->
+          <rect x="92" y="196" width="14" height="44" rx="5" fill="url(#skin)"/>
+          <rect x="114" y="196" width="14" height="44" rx="5" fill="url(#skin)"/>
+          <path d="M91 208 h16 v28 q-8 4 -16 0 Z" fill="url(#bronze)" stroke="#5a3810" stroke-width="1"/>
+          <path d="M113 208 h16 v28 q-8 4 -16 0 Z" fill="url(#bronze)" stroke="#5a3810" stroke-width="1"/>
+          <path d="M88 240 h20 v6 h-20 Z M112 240 h20 v6 h-20 Z" fill="#3b2410"/>
+
+          <!-- Faldón de tiras (pteruges) -->
+          <g fill="#7a4a24" stroke="#3b2410" stroke-width="1">
+            <rect x="84" y="170" width="9" height="32" rx="2"/>
+            <rect x="94" y="172" width="9" height="34" rx="2"/>
+            <rect x="104" y="172" width="12" height="35" rx="2"/>
+            <rect x="117" y="172" width="9" height="34" rx="2"/>
+            <rect x="127" y="170" width="9" height="32" rx="2"/>
+          </g>
+          <g fill="#e2b45c">
+            <circle cx="88.5" cy="198" r="1.6"/><circle cx="98.5" cy="202" r="1.6"/><circle cx="110" cy="203" r="1.6"/>
+            <circle cx="121.5" cy="202" r="1.6"/><circle cx="131.5" cy="198" r="1.6"/>
+          </g>
+
+          <!-- Coraza musculada -->
+          <path d="M82 96 Q110 88 138 96 L135 170 Q110 178 85 170 Z" fill="url(#bronze)" stroke="#5a3810" stroke-width="1.5"/>
+          <g fill="none" stroke="#6e4515" stroke-width="1.6" stroke-linecap="round" opacity=".8">
+            <path d="M92 118 Q101 126 110 118 Q119 126 128 118"/>
+            <path d="M110 120 L110 160"/>
+            <path d="M100 136 h20 M101 148 h18"/>
+          </g>
+          <!-- Cinturón -->
+          <path d="M85 164 Q110 172 135 164 L135 172 Q110 180 85 172 Z" fill="url(#crimson)"/>
+          <circle cx="110" cy="171" r="4" fill="url(#bronze)" stroke="#5a3810" stroke-width="1"/>
+          <!-- Hombreras -->
+          <ellipse cx="84" cy="100" rx="12" ry="9" fill="url(#bronze)" stroke="#5a3810" stroke-width="1"/>
+          <ellipse cx="136" cy="100" rx="12" ry="9" fill="url(#bronze)" stroke="#5a3810" stroke-width="1"/>
+
+          <!-- Cabeza -->
+          <g id="head">
+            <rect x="101" y="86" width="18" height="12" rx="4" fill="url(#skin)"/>
+            <!-- Barba -->
+            <path d="M96 84 Q110 112 124 84 Q118 96 110 98 Q102 96 96 84 Z" fill="#3a2414"/>
+            <!-- Cresta -->
+            <g id="crest">
+              <!-- Penacho de crin sobre el casco -->
+              <path d="M89 58 C80 30 94 4 110 2 C126 4 140 30 131 58 C125 48 118 44 110 44 C102 44 95 48 89 58 Z" fill="url(#crimson)" stroke="#4a0606" stroke-width="1"/>
+              <g stroke="#ff6a55" stroke-width=".9" opacity=".55" fill="none">
+                <path d="M94 52 C88 32 96 12 106 6"/><path d="M126 52 C132 32 124 12 114 6"/>
+                <path d="M102 46 C98 30 102 14 108 6"/><path d="M118 46 C122 30 118 14 112 6"/><path d="M110 44 L110 4"/>
+              </g>
+              <path d="M98 47 Q110 41 122 47" stroke="url(#bronzeDark)" stroke-width="4" fill="none" stroke-linecap="round"/>
+            </g>
+            <!-- Casco corintio -->
+            <path d="M86 70 C86 52 96 42 110 42 C124 42 134 52 134 70 L132 92 Q126 96 120 92 L120 78 L100 78 L100 92 Q94 96 88 92 Z"
+                  fill="url(#bronze)" stroke="#4a2c0b" stroke-width="1.6"/>
+            <!-- Abertura en T -->
+            <path d="M93 62 h34 v8 h-13 v20 h-8 v-20 h-13 Z" fill="#160b05"/>
+            <path d="M108 56 v24" stroke="url(#bronzeDark)" stroke-width="4"/>
+            <path d="M92 58 Q110 52 128 58" stroke="#fff0bf" stroke-width="1.2" fill="none" opacity=".6"/>
+            <!-- Ojos -->
+            <g id="eyes">
+              <circle cx="99.5" cy="66" r="7" fill="url(#eyeGlow)" class="eye-glow"/>
+              <circle cx="120.5" cy="66" r="7" fill="url(#eyeGlow)" class="eye-glow"/>
+              <ellipse class="eye-core" cx="99.5" cy="66" rx="3.2" ry="2.2" fill="#ffb22e"/>
+              <ellipse class="eye-core" cx="120.5" cy="66" rx="3.2" ry="2.2" fill="#ffb22e"/>
+            </g>
+            <!-- Boca -->
+            <ellipse id="mouth" cx="110" cy="85" rx="3.4" ry="1.4" fill="#5a1a10"/>
+          </g>
+
+          <!-- Brazo izquierdo con escudo -->
+          <g id="shield-arm">
+            <path d="M84 102 C72 112 66 128 66 144" stroke="url(#skin)" stroke-width="14" stroke-linecap="round" fill="none"/>
+            <g id="shield">
+              <circle cx="66" cy="150" r="36" fill="url(#shieldGrad)" stroke="#4a2c0b" stroke-width="2"/>
+              <circle cx="66" cy="150" r="31" fill="none" stroke="url(#crimson)" stroke-width="5"/>
+              <circle cx="66" cy="150" r="24" fill="none" stroke="#7a4f18" stroke-width="1" opacity=".7"/>
+              <!-- Emblema: lanza y llamas -->
+              <g id="emblem">
+                <path d="M66 128 L72 142 L66 139 L60 142 Z" fill="#7a0d0d"/>
+                <rect x="64.5" y="139" width="3" height="28" fill="#7a0d0d"/>
+                <path d="M56 160 C54 152 60 148 58 142 C64 148 62 154 66 158 C70 154 68 148 74 142 C72 148 78 152 76 160 C74 168 58 168 56 160 Z" fill="#9e1414" opacity=".85"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+
+</svg>

@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-maximiliano-torrez",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Portfolio profesional estático, bilingüe, generado desde datos.",
+  "scripts": {
+    "test": "node --test tests/",
+    "build": "node src/build.js"
+  }
+}
