@@ -45,9 +45,9 @@ const pend = (name) => ({ name, confirmed: false, level: null });
 const ok = (name, level = null) => ({ name, confirmed: true, level });
 
 export const stack = [
-  { id: 'lenguajes', title: { es: 'Lenguajes de programación', en: 'Programming languages' }, items: [ok('SQL'), pend('JavaScript'), pend('TypeScript'), pend('Python'), pend('PHP'), pend('Java'), pend('C#')] },
-  { id: 'frontend', title: { es: 'Frontend', en: 'Frontend' }, items: [pend('HTML'), pend('CSS'), pend('React'), pend('Bootstrap')] },
-  { id: 'backend', title: { es: 'Backend', en: 'Backend' }, items: [pend('Node.js'), pend('.NET')] },
+  { id: 'lenguajes', title: { es: 'Lenguajes de programación', en: 'Programming languages' }, items: [ok('SQL'), ok('JavaScript'), ok('Node.js'), ok('Java'), ok('C#'), ok('HTML'), ok('CSS'), pend('TypeScript'), pend('Python'), pend('PHP')] },
+  { id: 'frontend', title: { es: 'Frontend', en: 'Frontend' }, items: [pend('React'), pend('Bootstrap')] },
+  { id: 'backend', title: { es: 'Backend', en: 'Backend' }, items: [pend('.NET')] },
   { id: 'datos', title: { es: 'Bases de datos', en: 'Databases' }, items: [pend('MySQL'), pend('PostgreSQL'), pend('SQLite')] },
   { id: 'apis', title: { es: 'APIs e integraciones', en: 'APIs and integrations' }, items: [ok('APIs REST'), ok('JSON'), ok('XML'), ok('OAuth 2.0'), ok('Postman'), ok('Magento / Adobe Commerce')] },
   { id: 'herramientas', title: { es: 'Herramientas de desarrollo', en: 'Development tools' }, items: [ok('Jira'), ok('Figma'), ok('Magento Admin'), pend('Git')] },
