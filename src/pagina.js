@@ -87,6 +87,7 @@ export function renderPage(c, lang) {
 </head>
 <body>
 <a class="skip" href="#contenido">${esc(t('skip', lang))}</a>
+<div class="progress" aria-hidden="true"></div>
 <header class="top">
   <a class="brand" href="#inicio" aria-label="${esc(p.name)}"><span class="br">&lt;</span>MT<span class="br">/&gt;</span></a>
   <nav aria-label="${lang === 'es' ? 'Principal' : 'Main'}">${nav}<a class="lang" href="${base}${PATHS[other]}" hreflang="${other}" lang="${other}" aria-label="${esc(t('lang.switchLabel', lang))}">${other.toUpperCase()}</a></nav>
@@ -103,6 +104,7 @@ ${personal}
 ${contact}
 </main>
 <footer><p>© ${new Date().getFullYear()} ${esc(p.name)}</p></footer>
+<script src="${base}vendor/motion.js" defer></script>
 <script src="${base}reveal.js" defer></script>
 </body>
 </html>

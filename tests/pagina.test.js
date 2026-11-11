@@ -42,6 +42,18 @@ for (const lang of ['es', 'en']) {
     assert.match(html, /family=Cinzel/);
   });
 
+  test(`PF-13 [${lang}] carga motion antes que reveal.js, ambos diferidos y con la ruta del idioma`, () => {
+    const base = lang === 'es' ? '' : '\\.\\./';
+    const m = html.search(new RegExp(`<script src="${base}vendor/motion\\.js" defer></script>`));
+    const r = html.search(new RegExp(`<script src="${base}reveal\\.js" defer></script>`));
+    assert.ok(m > -1, 'falta vendor/motion.js');
+    assert.ok(r > m, 'reveal.js debe ir después de motion.js');
+  });
+
+  test(`PF-15 [${lang}] la página tiene la barra de progreso de lectura, oculta a lectores de pantalla`, () => {
+    assert.match(html, /<div class="progress" aria-hidden="true"><\/div>/);
+  });
+
   test(`PF-05d [${lang}] no se filtran valores vacíos`, () => {
     assert.doesNotMatch(html, /undefined|null|\[object Object\]/);
   });
